@@ -6,11 +6,11 @@ const createTuit = (req, res) => {
   newTuit._id = (new Date()).getTime() + '';
   newTuit.likes = 0;
   newTuit.liked = false;
+  newTuit.dislikes = 0;
   tuits.push(newTuit);
   res.json(newTuit);
 }
 const findTuits = (req, res) => {
-  console.log("Heere");
   res.json(tuits)
 }
 const updateTuit = (req, res) => {
